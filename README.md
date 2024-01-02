@@ -1,4 +1,4 @@
-# data-analytics-power-bi-report690
+# Data Analytics Power BI Report
 ## Project Description
 This project is a part of the requirements for the Aicore data analytics certification. It was undertaken for a medium-sized international retailer who is keen on elevating their business intelligence practices.
 
