@@ -142,15 +142,7 @@ This report page focuses on customer-level analysis and will contain the followi
 
 3. A table showing the top 20 customers by total revenue, showing the revenue per customer and the total orders for each customer
   - Created the Top 20 Customers Table
-     - Created a new table, which displays the top 20 customers, filtered by revenue. The table shows each customer's full name, revenue, and number of orders. See table creation formular below:
-     - **Top 20 Customers =
-     CALCULATETABLE(
-     TOPN(20, SUMMARIZECOLUMNS (
-       Customers[Full Name],
-       "Total Revenue", SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sale Price])),
-       "Total Orders", (COUNTROWS('Orders'))
-       ), [Total Revenue], DESC), Customers[Full Name] <> BLANK()
-     )**
+     - Configured table visual, used Advanced filter option to display the top 20 customers, filtered by revenue. The table shows each customer's full name, revenue, and number of orders.
      - Added conditional formatting to the revenue column, to display data bars for the revenue values.
 
 4. A Donut chart showing the number of customers by country, and a bar chart showing number of customers per product category
@@ -173,8 +165,8 @@ This report page focuses on customer-level analysis and will contain the followi
   - Added A Date Slicer
      - Added a date slicer to allow users to filter the page by year, using the between slicer style. 
 
-   ### Screeshot of the Customer Detail Report Page
-   ![Customer Detail](/customer_detail.png)
+### Screeshot of the Customer Detail Report Page
+![Customer Detail](/customer_detail.png)
 
 7. Updated Documentation
   - Updated the **README** file on the GitHub repository of the project.
@@ -226,21 +218,74 @@ This report page is for high-level executive summary. The purpose of this report
 
 6. A table of the top 10 products
   - Created the Top 10 Products Table
-     - Created a new table, which displays the top 10 products, filtered by revenue. The table shows each products name, category, total revenue, toral customers and number of orders. See table creation formular below:
-     - Top 10 Products = 
-       TOPN(10,  SUMMARIZECOLUMNS (
-       Products[Name],
-       Products[Category],
-       "Total Revenue", SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sale Price])),
-       "Total Customers", DISTINCTCOUNT(Orders[User ID]), 
-       "Total Orders", (COUNTROWS('Orders'))
-     ), [Total Revenue], DESC)
+     - Configured table visual, used Advanced filter option to display the top 10 products, filtered by revenue. The table shows each products name, category, total revenue, toral customers and number of orders.
      - Added conditional formatting to the revenue column, to display data bars for the revenue values.
-   ### Screeshot of the Executive Summary Report Page
-   ![Executive Summary](/executive_summary.png)
+### Screeshot of the Executive Summary Report Page
+![Executive Summary](/executive_summary.png)
 
 7. Updated Documentation
   - Updated the **README** file on the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
 
+### 7: Creating a Product Detail Page
+The purpose of this page is to provide an in-depth look at which products within the inventory are performing well, with the option to filter by product category and country. As requested by the product team, the following visuals have been created for this report:
+
+1. Gauge visuals to show how the selected category's revenue, profit, and number of orders are performing against a quarterly target.
+  - Added a set of three gauges, showing the current-quarter performance of Orders, Revenue and Profit against a quarterly target (10% quarter-on-quarter growth in all three metrics).
+    - Defined DAX measures in the measures table for the three metrics, and for the quarterly targets for each metric as follows:
+    - Quarterly Profit = CALCULATE([Total Profit], DATESQTD(Dates[Date]))
+    - Quarterly Revenue = CALCULATE([Total Revenue], DATESQTD(Dates[Date]))
+    - Quarterly Orders = CALCULATE([Total Orders], DATESQTD(Dates[Date]))
+    - Target Quarterly Profit = CALCULATE([Total Profit], DATESQTD(DATEADD(Dates[Date], -1, QUARTER))) * 1.1
+    - Target Quarterly Revenue = CALCULATE([Total Revenue], DATESQTD(DATEADD(Dates[Date], -1, QUARTER))) * 1.1
+    - Target Quarterly Orders = CALCULATE([Total Orders], DATESQTD(DATEADD(Dates[Date], -1, QUARTER))) * 1.1
+    - Created three gauge filters, and assigned the created measures. In each case, the maximum value of the gauge was set to the target, so that the gauge shows as full when the target is met.
+    - Applied conditional formatting to the callout value, so that it shows as red if the target is not yet met, and black otherwise. See formula below:
+    - Goal Profit Colour = IF('Measures Table'[Quarterly Profit] > 'Measures Table'[Target Quarterly Profit], "#1A1A1A", "#FF0000")
+    - Goal Revenue Colour = IF('Measures Table'[Quarterly Revenue] > 'Measures Table'[Target Quarterly Revenue], "#1A1A1A", "#FF0000")
+    - Goal Orders Colour = IF('Measures Table'[Quarterly Orders] > 'Measures Table'[Target Quarterly Orders], "#1A1A1A", "#FF0000")
+
+2. Card visuals showing which filters are currently selected
+  - Add Filter State Cards:  
+  - Created the measures for selected category and country and applied them to the filter state cards. See formila for measure below:
+  - Country Selection = SWITCH (TRUE(), SELECTEDVALUE(Stores[Country Code])="GB", "United Kingdom", SELECTEDVALUE(Stores[Country Code])="DE", "Germany", SELECTEDVALUE(Stores[Country Code])= "US", "United States")
+
+  - Category Selection = SWITCH (TRUE(), SELECTEDVALUE(Products[Category])="diy", "diy",SELECTEDVALUE(Products[Category])="food-and-drink", "food-and-drink",SELECTEDVALUE(Products[Category])="health-and-beauty", "health-and-beauty",SELECTEDVALUE(Products[Category])="homeware", "homeware",SELECTEDVALUE(Products[Category])="pets", "pets",SELECTEDVALUE(Products[Category])="sports-and-leisure", "sports-and-leisure",SELECTEDVALUE(Products[Category])="toys-and-games", "toys-and-games")
+
+3. An area chart showing relative revenue performance of each category over time
+ - Added a new area chart, and apply the following fields:
+ - X axis should be Dates[Start of Quarter]
+ - Y axis values should be Total Revenue
+ - Legend should be Products[Category]
+
+4. A table showing the top 10 products by revenue in the selected context
+  - Created the Top 10 Products Table
+     - Configured table visual, used Advanced filter option to display the top 10 products, filtered by revenue. The table shows each products name, category, total revenue, toral customers and number of orders.
+
+5. A scatter graph of quantity ordered against profit per item for products in the current context. This visual will allow the products team to quickly see which product ranges are both top-selling items and also profitable.
+  - Created a new calculated column called **[Profit per Item]** in the **Products** table, using a DAX formula to work out the profit per item.
+  - Added a new Scatter chart to the page, and configure it as follows:
+  - Values set to **Products[Description]**
+  - X-Axis set to **Products[Profit per Item]**
+  - Y-Axis set to **Products[Total Quantity]**
+  - Legend set to **Products[Category]**
+
+6. Created a Slicer Toolbar
+  - Added a new blank button to the top of the navigation bar, set the icon type to Custom in the Format pane, and choose a filter image icon. Also set the tooltip text to **Open Slicer Panel**.
+  - Added a new rectangle shape with the same colour as the navigation bar (dimensions: height - the page height, width - about 5X the width of the navigation). Opened the Selection pane and brought it to the top of the stacking order.
+  - Added two new slicers. One set to **Products[Category]**, and the other to **Stores[Country]**. Changed the titles to Category Selection and Country Selection respectively.
+    - Selected **Vertical List** slicer style for both slicers
+    - Selected multiple items option in the Product Category slicer, but single option in the Country slicer
+    - Grouped the slicers with the slicer toolbar shape in the **Selection** pane.
+  - Add a **Back** button so that the slicer toolbar can be hidden when it's not in use. Dragged the back button into the group with the slicers and toolbar shape in the **Selection** pane.
+  - Opened the **Bookmarks** pane and added two new bookmarks: one with the toolbar group hidden in the Selection pane, and one with it visible. Named them **Slicer Bar Closed** and **Slicer Bar Open**. To prevent the bookmarks from altering the slicer state when we open and close the toolbar, right-clicked each bookmark in turn, and ensured that **Data** is unchecked.
+  - Set the **Type** for each button to **Bookmark** and selected the appropriate bookmark. Tested button working OK.
+
+### Screeshot of the Product Detail Report Page
+![Product Detail](/product_detail.png)
+
+7. Updated Documentation
+  - Updated the **README** file on the GitHub repository of the project.
+  - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
+  - Uploaded Power BI Screenshots to the Github repository.
