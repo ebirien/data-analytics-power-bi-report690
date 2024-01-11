@@ -318,12 +318,12 @@ The purpose of this page is to allow the regional managers to easily check on th
   - Added a table showing the top 5 products, with columns: **Description**, **Profit YTD**, **Total Orders**, **Total Revenue**
   - Added a Card visual showing the currently selected store.
 
-  ### Screeshot of the drillthrough Page
+  ### Screeshot of Stores drillthrough Page
   ![Stores Drillthrough](/stores_drillthrough.png)
 
 4. Stores Tooltip Page
   - Created a custom tooltip page, and copy over the profit gauge and the selected store card visuals
   - Set the tooltip of the map visual to the tooltip page.
 
-  ### Screeshot of the drillthrough Page
+  ### Screeshot of Stores tooltip Page
   ![Stores Tooltip](/stores_tooltip.png)
