@@ -327,6 +327,11 @@ The purpose of this page is to allow the regional managers to easily check on th
   ### Screenshot of Stores tooltip Page
   ![Stores Tooltip](/stores_tooltip.png)
 
+5. Updated Documentation
+  - Updated the **README** file on the GitHub repository of the project.
+  - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
+  - Uploaded Power BI Screenshots to the Github repository.
+
 ### 9: Cross-Filtering and Navigation
 
 1. Fixed the cross-filtering - From the Edit Interactions view in the Format tab of the ribbon, set the following interactions: 
@@ -349,10 +354,10 @@ The purpose of this page is to allow the regional managers to easily check on th
   - Turned on the **Action** format option, for each button and selected the type as **Page navigation**, and correct page under **Destination**
   - Finally, grouped the buttons together, and copied them across to the other pages.
 
+    ### Screenshot of Executive Summary Page with Navigation Buttons
+    ![Executive Summary](/executive_summary_nav.png)
+
 3. Updated Documentation
   - Updated the **README** file on the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
-
-  ### Screenshot of Executive Summary Page with Navigation Buttons
-  ![Executive Summary](/executive_summary_nav.png)
