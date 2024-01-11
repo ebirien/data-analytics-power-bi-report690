@@ -326,3 +326,33 @@ The purpose of this page is to allow the regional managers to easily check on th
 
   ### Screenshot of Stores tooltip Page
   ![Stores Tooltip](/stores_tooltip.png)
+
+### 9: Cross-Filtering and Navigation
+
+1. Fixed the cross-filtering - From the Edit Interactions view in the Format tab of the ribbon, set the following interactions: 
+
+  - **Executive Summary Page**
+    - **Product Category** bar chart and **Top 10 Products** table will not filter the card visuals or KPIs
+
+  - **Customer Detail Page**
+    - **Top 20 Customers** table will not filter any of the other visuals 
+    - **Total Customers by Product** Column Chart will not affect the **Customers** line graph 
+    - **Total Customers by Country** donut chart will cross-filter **Total Customers by Product** Column Chart.
+
+  - **Product Detail Page**
+    - **Orders vs. Profitability** scatter graph will not affect any other visuals 
+    - **Top 10 Products** table will not affect any other visuals
+
+2. Finished the Navigation Bar: Add navigation buttons to the individual report pages.
+  - In the sidebar of the Executive Summary page, added four new blank buttons, and in the **Format > Button Style** pane, ensured that the **Apply settings** to field is set to **Default**, and set each button icon to the relevant white png in the Icon tab.
+  - Set the **Format > Button Style > Apply settings** to **On Hover**, for each button, and then selected the alternative colour of the relevant button icon under the Icon tab.
+  - Turned on the **Action** format option, for each button and selected the type as **Page navigation**, and correct page under **Destination**
+  - Finally, grouped the buttons together, and copied them across to the other pages.
+
+3. Updated Documentation
+  - Updated the **README** file on the GitHub repository of the project.
+  - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
+  - Uploaded Power BI Screenshots to the Github repository.
+
+  ### Screenshot of Executive Summary Page with Navigation Buttons
+  ![Executive Summary](/executive_summary_nav.png)
