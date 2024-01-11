@@ -69,7 +69,7 @@ To start construction of the the data model for this Power BI project
   - **Orders[Order Date] to Dates[Date]**
   - **Orders[Shipping Date] to Dates[Date]**
   - Ensured that the relationship between **Orders[Order Date]** and **Dates[Date]** is the active relationship, and that all relationships are one-to-many, with a single filter direction from the one side to the many side.
-### Screeshot of the Data Model
+### Screenshot of the Data Model
 ![Data Model](/data_model.png)
 
 3. Created a Measures Table: Created a Measures Table in the Model View with the Power Query Editor option. It makes the measures table visible in the Query Editor, which is useful for debugging and troubleshooting.
@@ -165,7 +165,7 @@ This report page focuses on customer-level analysis and will contain the followi
   - Added A Date Slicer
      - Added a date slicer to allow users to filter the page by year, using the between slicer style. 
 
-### Screeshot of the Customer Detail Report Page
+### Screenshot of the Customer Detail Report Page
 ![Customer Detail](/customer_detail.png)
 
 7. Updated Documentation
@@ -220,7 +220,7 @@ This report page is for high-level executive summary. The purpose of this report
   - Created the Top 10 Products Table
      - Configured table visual, used Advanced filter option to display the top 10 products, filtered by revenue. The table shows each products name, category, total revenue, toral customers and number of orders.
      - Added conditional formatting to the revenue column, to display data bars for the revenue values.
-### Screeshot of the Executive Summary Report Page
+### Screenshot of the Executive Summary Report Page
 ![Executive Summary](/executive_summary.png)
 
 7. Updated Documentation
@@ -282,10 +282,10 @@ The purpose of this page is to provide an in-depth look at which products within
   - Opened the **Bookmarks** pane and added two new bookmarks: one with the toolbar group hidden in the Selection pane, and one with it visible. Named them **Slicer Bar Closed** and **Slicer Bar Open**. To prevent the bookmarks from altering the slicer state when we open and close the toolbar, right-clicked each bookmark in turn, and ensured that **Data** is unchecked.
   - Set the **Type** for each button to **Bookmark** and selected the appropriate bookmark. Tested button working OK.
 
-### Screeshot of the Product Detail Report Page
+### Screenshot of the Product Detail Report Page
 ![Product Detail](/product_detail.png)
 
-### Screeshot of the Product Detail Report Page Showing Slicer Panel
+### Screenshot of the Product Detail Report Page Showing Slicer Panel
 ![Product Detail Open Slicer Panel](/product_detail_filter.png)
 
 7. Updated Documentation
@@ -305,7 +305,7 @@ The purpose of this page is to allow the regional managers to easily check on th
 
 2. Country Slicer: Added a slicer above the map, set the slicer field to **Stores[Country]**, and in the Format section set the slicer style as **Tile** and the **Selection** settings to **Multi-select with Ctrl/Cmd** and **Show "Select All"** as options in the slicer.
 
-  ### Screeshot of the Store Map Report Page
+  ### Screenshot of Stores Map Report Page
   ![Stores Map](/stores_map.png)
 
 3. Stores Drillthrough Page that summarises each store's performance
@@ -318,12 +318,12 @@ The purpose of this page is to allow the regional managers to easily check on th
   - Added a table showing the top 5 products, with columns: **Description**, **Profit YTD**, **Total Orders**, **Total Revenue**
   - Added a Card visual showing the currently selected store.
 
-  ### Screeshot of Stores drillthrough Page
+  ### Screenshot of Stores drillthrough Page
   ![Stores Drillthrough](/stores_drillthrough.png)
 
 4. Stores Tooltip Page
   - Created a custom tooltip page, and copy over the profit gauge and the selected store card visuals
   - Set the tooltip of the map visual to the tooltip page.
 
-  ### Screeshot of Stores tooltip Page
+  ### Screenshot of Stores tooltip Page
   ![Stores Tooltip](/stores_tooltip.png)
