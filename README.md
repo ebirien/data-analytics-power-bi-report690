@@ -285,7 +285,45 @@ The purpose of this page is to provide an in-depth look at which products within
 ### Screeshot of the Product Detail Report Page
 ![Product Detail](/product_detail.png)
 
+### Screeshot of the Product Detail Report Page Showing Slicer Panel
+![Product Detail Open Slicer Panel](/product_detail_filter.png)
+
 7. Updated Documentation
   - Updated the **README** file on the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
+
+### 8: Creating a Stores Map Page
+The purpose of this page is to allow the regional managers to easily check on the stores under their control, showing them which of the stores are most profitable, as well as which are on track to reach their yearly profit and revenue targets. The following visuals have been created for this report:
+
+1. Added a Map visual and turned on **Show Lables** option.
+  - Set the controls of the map as follows:
+    - **Auto-Zoom**: On
+    - **Zoom buttons**: Off
+    - **Lasso button**: Off
+  - Assigned the Geography hierarchy to the **Location** field, and **Profit YTD** to the **Bubble size** field.
+
+2. Country Slicer: Added a slicer above the map, set the slicer field to **Stores[Country]**, and in the Format section set the slicer style as **Tile** and the **Selection** settings to **Multi-select with Ctrl/Cmd** and **Show "Select All"** as options in the slicer.
+
+  ### Screeshot of the Store Map Report Page
+  ![Stores Map](/stores_map.png)
+
+3. Stores Drillthrough Page that summarises each store's performance
+  - Created a new page named **Stores Drillthrough**. Set the **Page type** to **Drillthrough** and set **Drill through from** to **Country Region**. Set **Drill through when** to **Used as category**.
+  - Added visuals to the drillthrough page:
+  - Gauges for **Profit YTD** and **Revenue YTD** against a target of 20% year-on-year growth vs. the same period in the previous year. Set the target to use the **Target** field, as the target will change as we move through the year. Created the target measures as follows:
+    - **Profit Goal = CALCULATE([Profit YTD], DATESYTD(DATEADD(Dates[Date], -1, YEAR))) * 1.2**
+    - **Revenue Goal = CALCULATE([Revenue YTD], DATESYTD(DATEADD(Dates[Date], -1, YEAR))) * 1.2**
+  - Added a column chart showing **Total Orders** by product **Category** for the store
+  - Added a table showing the top 5 products, with columns: **Description**, **Profit YTD**, **Total Orders**, **Total Revenue**
+  - Added a Card visual showing the currently selected store.
+
+  ### Screeshot of the drillthrough Page
+  ![Stores Drillthrough](/stores_drillthrough.png)
+
+4. Stores Tooltip Page
+  - Created a custom tooltip page, and copy over the profit gauge and the selected store card visuals
+  - Set the tooltip of the map visual to the tooltip page.
+
+  ### Screeshot of the drillthrough Page
+  ![Stores Tooltip](/stores_tooltip.png)
