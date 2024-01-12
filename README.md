@@ -43,7 +43,7 @@ The project involved the following tasks:
   - Renamed the columns to align with Power BI naming conventions, to ensure consistency and clarity in the report.
 
 5. Updated Documentation
-  - Updated the **README** file on the GitHub repository of the project.
+  - Updated the **README** file and uploaded to the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
 
 ### 3: Creating the Data Model
@@ -169,7 +169,7 @@ This report page focuses on customer-level analysis and will contain the followi
 ![Customer Detail](/customer_detail.png)
 
 7. Updated Documentation
-  - Updated the **README** file on the GitHub repository of the project.
+  - Updated the **README** file and uploaded to the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
 
@@ -224,7 +224,7 @@ This report page is for high-level executive summary. The purpose of this report
 ![Executive Summary](/executive_summary.png)
 
 7. Updated Documentation
-  - Updated the **README** file on the GitHub repository of the project.
+  - Updated the **README** file and uploaded to the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
 
@@ -288,7 +288,7 @@ The purpose of this page is to provide an in-depth look at which products within
 ![Product Detail Open Slicer Panel](/product_detail_filter.png)
 
 7. Updated Documentation
-  - Updated the **README** file on the GitHub repository of the project.
+  - Updated the **README** file and uploaded to the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
 
@@ -328,7 +328,7 @@ The purpose of this page is to allow the regional managers to easily check on th
   ![Stores Tooltip](/stores_tooltip.png)
 
 5. Updated Documentation
-  - Updated the **README** file on the GitHub repository of the project.
+  - Updated the **README** file and uploaded to the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
 
@@ -358,7 +358,7 @@ The purpose of this page is to allow the regional managers to easily check on th
     ![Executive Summary](/executive_summary_nav.png)
 
 3. Updated Documentation
-  - Updated the **README** file on the GitHub repository of the project.
+  - Updated the **README** file and uploaded to the GitHub repository of the project.
   - Saved the latest version of the Power BI project file (**project.pbix**) and uploaded it to the Github repository.
   - Uploaded Power BI Screenshots to the Github repository.
 
@@ -385,5 +385,5 @@ This is to demonstrate the extraction and dissemination of key data insights for
     - Answer (Refer to: **question_5.csv** and **question_5.sql**)
 
 4. Updated Documentation
-  - Updated the **README** file on the GitHub repository of the project.
-  - Uploaded SQL queries and results the Github repository.
+  - Updated the **README** file and uploaded to the GitHub repository of the project.
+  - Uploaded SQL queries and results to the Github repository.
