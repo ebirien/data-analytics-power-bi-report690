@@ -374,15 +374,15 @@ This is to demonstrate the extraction and dissemination of key data insights for
 
 3. Queried the Database to answer the following questions. In each case, the query result is exported to a csv file, along with the query itself as a .sql file.
   - How many staff are there in all of the UK stores?
-    - Answer (Refer to:  **question_1.csv** and **question_1.sql**)
+    - Answer (Refer to: **question_1.csv** and **question_1.sql**)
   - Which month in 2022 has had the highest revenue?
     - Answer (Refer to:  **question_2.csv** and **question_2.sql**)
   - Which German store type had the highest revenue for 2022?
-    - Answer (Refer to:  **question_3.csv** and **question_3.sql**)
+    - Answer (Refer to: **question_3.csv** and **question_3.sql**)
   - Create a view where the rows are the store types and the columns are the total sales, percentage of total sales and the count of orders
-    - Answer (Refer to:  **question_4.csv** and **question_4.sql**)
+    - Answer (Refer to: **question_4.csv** and **question_4.sql**)
   - Which product category generated the most profit for the "Wiltshire, UK" region in 2021?
-    - Answer (Refer to:  **question_5.csv** and **question_5.sql**)
+    - Answer (Refer to: **question_5.csv** and **question_5.sql**)
 
 4. Updated Documentation
   - Updated the **README** file on the GitHub repository of the project.
