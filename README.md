@@ -70,7 +70,7 @@ To start construction of the the data model for this Power BI project
   - **Orders[Shipping Date] to Dates[Date]**
   - Ensured that the relationship between **Orders[Order Date]** and **Dates[Date]** is the active relationship, and that all relationships are one-to-many, with a single filter direction from the one side to the many side.
 ### Screenshot of the Data Model
-![Data Model](/data_model.png)
+![Data Model](/images/data_model.png)
 
 3. Created a Measures Table: Created a Measures Table in the Model View with the Power Query Editor option. It makes the measures table visible in the Query Editor, which is useful for debugging and troubleshooting.
   - From the Model view, selected Enter Data from the Home tab of the ribbon
@@ -166,7 +166,7 @@ This report page focuses on customer-level analysis and will contain the followi
      - Added a date slicer to allow users to filter the page by year, using the between slicer style. 
 
 ### Screenshot of the Customer Detail Report Page
-![Customer Detail](/customer_detail.png)
+![Customer Detail](/images/customer_detail.png)
 
 7. Updated Documentation
   - Updated the **README** file and uploaded to the GitHub repository of the project.
@@ -221,7 +221,7 @@ This report page is for high-level executive summary. The purpose of this report
      - Configured table visual, used Advanced filter option to display the top 10 products, filtered by revenue. The table shows each products name, category, total revenue, toral customers and number of orders.
      - Added conditional formatting to the revenue column, to display data bars for the revenue values.
 ### Screenshot of the Executive Summary Report Page
-![Executive Summary](/executive_summary.png)
+![Executive Summary](/images/executive_summary.png)
 
 7. Updated Documentation
   - Updated the **README** file and uploaded to the GitHub repository of the project.
@@ -282,10 +282,10 @@ The purpose of this page is to provide an in-depth look at which products within
   - Set the **Type** for each button to **Bookmark** and selected the appropriate bookmark. Tested button working OK.
 
 ### Screenshot of the Product Detail Report Page
-![Product Detail](/product_detail.png)
+![Product Detail](/images/product_detail.png)
 
 ### Screenshot of the Product Detail Report Page Showing Slicer Panel
-![Product Detail Open Slicer Panel](/product_detail_filter.png)
+![Product Detail Open Slicer Panel](/images/product_detail_filter.png)
 
 7. Updated Documentation
   - Updated the **README** file and uploaded to the GitHub repository of the project.
@@ -305,7 +305,7 @@ The purpose of this page is to allow the regional managers to easily check on th
 2. Country Slicer: Added a slicer above the map, set the slicer field to **Stores[Country]**, and in the Format section set the slicer style as **Tile** and the **Selection** settings to **Multi-select with Ctrl/Cmd** and **Show "Select All"** as options in the slicer.
 
   ### Screenshot of Stores Map Report Page
-  ![Stores Map](/stores_map.png)
+  ![Stores Map](/images/stores_map.png)
 
 3. Stores Drillthrough Page that summarises each store's performance
   - Created a new page named **Stores Drillthrough**. Set the **Page type** to **Drillthrough** and set **Drill through from** to **Country Region**. Set **Drill through when** to **Used as category**.
@@ -318,14 +318,14 @@ The purpose of this page is to allow the regional managers to easily check on th
   - Added a Card visual showing the currently selected store.
 
   ### Screenshot of Stores drillthrough Page
-  ![Stores Drillthrough](/stores_drillthrough.png)
+  ![Stores Drillthrough](/images/stores_drillthrough.png)
 
 4. Stores Tooltip Page
   - Created a custom tooltip page, and copy over the profit gauge and the selected store card visuals
   - Set the tooltip of the map visual to the tooltip page.
 
   ### Screenshot of Stores tooltip Page
-  ![Stores Tooltip](/stores_tooltip.png)
+  ![Stores Tooltip](/images/stores_tooltip.png)
 
 5. Updated Documentation
   - Updated the **README** file and uploaded to the GitHub repository of the project.
@@ -355,7 +355,7 @@ The purpose of this page is to allow the regional managers to easily check on th
   - Finally, grouped the buttons together, and copied them across to the other pages.
 
     ### Screenshot of Executive Summary Page with Navigation Buttons
-    ![Executive Summary](/executive_summary_nav.png)
+    ![Executive Summary](/images/executive_summary_nav.png)
 
 3. Updated Documentation
   - Updated the **README** file and uploaded to the GitHub repository of the project.
