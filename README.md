@@ -132,7 +132,7 @@ This report page focuses on customer-level analysis and will contain the followi
   - Created Headline Card Visuals
      - Created two rectangles and arranged them in the top left corner of the page. These will serve as the backgrounds for the card visuals.
      - Added a card visual for the **[Total Customers]** measure we created earlier. Rename the field **Unique Customers**.
-     - Created a new measure in the **Measures Table** defined as `[Revenue per Customer] = DIVIDE([Total Revenue],[Total Customers])`
+     - Created a new measure in the **Measures Table** defined as: `[Revenue per Customer] = DIVIDE([Total Revenue],[Total Customers])`
      - Added a card visual for the **[Revenue per Customer]** measure 
 
 2. A line chart of weekly distinct customers
@@ -372,7 +372,7 @@ This is to demonstrate the extraction and dissemination of key data insights for
   - Printed a list of the columns in the orders table and saved the result to a csv file called **orders_columns.csv**
   - Repeated the same process for each other table in the database, saving the results to a csv file with the same name as the table
 
-3. Queried the Database to answer the following questions. In each case, the query result is exported to a csv file, along with the query itself as a .sql file.
+3. Queried the Database to answer the following questions. In each case, the query result is exported to a csv file, along with the query itself as a .sql file. These files can be found in the **answers** folder.
   - How many staff are there in all of the UK stores?
     - Answer (Refer to: **question_1.csv** and **question_1.sql**)
   - Which month in 2022 has had the highest revenue?
